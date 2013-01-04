@@ -28,7 +28,7 @@
 class Xpm 
 {
 public:
-   Xpm(Display* display, Window root, char** data);
+   Xpm(Display* display, Window root, const char** data);
    virtual ~Xpm();
    void setWindowPixmap(Window win);
    void setWindowPixmapShaped(Window win);

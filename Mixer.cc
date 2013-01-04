@@ -66,7 +66,7 @@ Mixer::Mixer(int argc, char** argv)
    Atom       deleteWindow;
    Xpm*       image;
    char*      displayName = NULL;
-   char*      card = "default";
+   const char*      card = "default";
 
    mError = 0;
    mInstanceName = INSTANCENAME;
@@ -554,9 +554,12 @@ void Mixer::run()
 	       // Load defaults or execute command
 	       if (mCommand) {
 		 char command[512];
+		 int status;
 
 		 snprintf(command, 512, "%s &", mCommand);
-		 system(command);
+		 status = system(command);
+		 if (status != 0 )
+		 	Mixer::showErrorLed(); 
 	       }
 	       else
 		 loadVolumeSettings();

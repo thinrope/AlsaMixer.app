@@ -26,10 +26,10 @@
 
 #include <X11/Xlib.h>
 
-#define APPNAME		"AlsaMixer.app"
-#define VERSION		"1.8.0"
-#define INSTANCENAME	"alsamixer_app"
-#define CLASSNAME	"AlsaMixer_app"
+#define APPNAME		(char *) "AlsaMixer.app"
+#define VERSION		(char *) "1.8.1"
+#define INSTANCENAME	(char *) "alsamixer_app"
+#define CLASSNAME	(char *) "AlsaMixer_app"
 #define SETTINGS        "/GNUstep/Defaults/AlsaMixer"
 #define MAX_COMMAND_LENGTH	512
 

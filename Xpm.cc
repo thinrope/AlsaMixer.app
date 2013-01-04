@@ -30,14 +30,14 @@
 
 using namespace std;
 
-Xpm::Xpm(Display* display, Window root, char** data) 
+Xpm::Xpm(Display* display, Window root, const char** data) 
 {
    int error;
 
    mDisplay = display;
 
    mAttributes.valuemask = 0;
-   error = XpmCreatePixmapFromData(mDisplay, root, data, &mImage, &mMask, &mAttributes);
+   error = XpmCreatePixmapFromData(mDisplay, root, (char **)data, &mImage, &mMask, &mAttributes);
 
    switch (error) {
    case XpmColorError:
