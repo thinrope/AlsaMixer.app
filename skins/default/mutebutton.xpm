@@ -1,5 +1,5 @@
 /* XPM */
-static char * mutebutton_xpm[] = {
+static const char * mutebutton_xpm[] = {
 "16 9 18 1",
 " 	c None",
 ".	c #B7BAC7",
